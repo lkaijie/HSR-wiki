@@ -1,4 +1,4 @@
-package com.example.hsrbookmark
+package com.example.hsrguide
 
 import org.junit.Test
 
