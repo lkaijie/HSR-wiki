@@ -9,6 +9,7 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.hsrguide.databinding.ActivityMainBinding
 
@@ -23,11 +24,18 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-//        setSupportActionBar(binding.toolbar)
 
-        val navController = findNavController(R.id.nav_host_fragment_content_main)
-//        appBarConfiguration = AppBarConfiguration(navController.graph)
-//        setupActionBarWithNavController(navController, appBarConfiguration)
+//        val navController = findNavController(R.id.nav_host_fragment_content_main)  // for fragment
+        val navController = supportFragmentManager.findFragmentById(R.id.nav_host_fragment_content_main)!!.findNavController()  // for fragmentcontainerview
+
+
+//        appbarlayout
+        setSupportActionBar(binding.toolbar)
+        appBarConfiguration = AppBarConfiguration(navController.graph)
+        setupActionBarWithNavController(navController, appBarConfiguration)
+//        hide the action bar
+        supportActionBar?.hide()
+
 
         val bottomNav = binding.bottomNav
         bottomNav.setupWithNavController(navController)
