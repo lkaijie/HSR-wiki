@@ -7,6 +7,7 @@
         android:checkable="false"
         android:enabled="true"
         android:title="Characters"
+        android:icon="@drawable/characters_hsr"
         android:visible="true" />
 
     <item
@@ -14,21 +15,25 @@
         android:enabled="true"
         android:checkable="false"
         android:visible="true"
+        android:icon="@drawable/lightcones_hsr"
         android:title="Lightcones" />
 
     <item
         android:id="@+id/home_main"
         android:enabled="true"
+        android:icon="@drawable/baseline_home_24"
         android:title="Home" />
 
     <item
         android:id="@+id/relics_main"
         android:enabled="true"
+        android:icon="@drawable/relics_hsr"
         android:title="Relics" />
 
     <item
-        android:id="@+id/navigation_profile"
+        android:id="@+id/game_modes_main"
         android:enabled="true"
-        android:title="test4" />
+        android:icon="@drawable/gamemodes_hsr"
+        android:title="Game Modes" />
 
 </menu>

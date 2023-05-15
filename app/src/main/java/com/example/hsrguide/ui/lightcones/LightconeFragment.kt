@@ -1,4 +1,4 @@
-package com.example.hsrguide.ui
+package com.example.hsrguide.ui.lightcones
 
 import android.os.Bundle
 import android.view.LayoutInflater

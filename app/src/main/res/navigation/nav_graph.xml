@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/home_main">
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.example.hsrguide.FirstFragment"
+        android:name="com.example.hsrguide.ui.FirstFragment"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_first">
 
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="com.example.hsrguide.SecondFragment"
+        android:name="com.example.hsrguide.ui.SecondFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_second">
 
@@ -25,9 +25,12 @@
             android:id="@+id/action_SecondFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
     </fragment>
+
+
+<!--    Character Screen-->
     <fragment
         android:id="@+id/characters_main"
-        android:name="com.example.hsrguide.ui.Characters"
+        android:name="com.example.hsrguide.ui.characters.Characters"
         android:label="Character Screen"
         tools:layout="@layout/characters_main" >
         <action
@@ -43,13 +46,48 @@
 <!--            android:id="@+id/action_character_detail_to_characters_main"-->
 <!--            app:destination="@id/characters_main" />-->
 <!--    </fragment>-->
+
+<!--    Lightcones/Weapon Screen-->
     <fragment
         android:id="@+id/lightcones_main"
-        android:name="com.example.hsrguide.ui.LightconeFragment"
+        android:name="com.example.hsrguide.ui.lightcones.LightconeFragment"
         android:label="Lighcone Screen(nav_graph)"
         tools:layout="@layout/lightcones_main" >
         <action
             android:id="@+id/action_lightconeFragment_to_lightcone_detail"
             app:destination="@id/FirstFragment" />
     </fragment>
+
+<!--    Home screen (maybe events and current banner stuff like that?)-->
+    <fragment
+        android:id="@id/home_main"
+        android:name="com.example.hsrguide.ui.home.HomeFragment"
+        android:label="Home Screen"
+        tools:layout="@layout/home_main" >
+        <action
+            android:id="@+id/action_homeFragment_to_home_detail"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+<!--    Relics/Artifact Screen-->
+    <fragment
+        android:id="@+id/relics_main"
+        android:name="com.example.hsrguide.ui.relics.RelicsFragment"
+        android:label="Relics Screen"
+        tools:layout="@layout/relics_main" >
+        <action
+            android:id="@+id/action_relicsFragment_to_relics_detail"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+
+<!--    Game modes screen (forgotten hall/simulated universe)-->
+    <fragment
+        android:id="@+id/game_modes_main"
+        android:name="com.example.hsrguide.ui.game_modes.GameModesFragment"
+        android:label="Game Modes Screen"
+        tools:layout="@layout/game_modes_main" >
+        <action
+            android:id="@+id/action_gameModesFragment_to_gameModes_detail"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+
 </navigation>
