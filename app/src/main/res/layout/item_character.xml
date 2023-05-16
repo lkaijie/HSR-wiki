@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/five_star_background"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/character_img"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:srcCompat="@drawable/silverwolf_big"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/info_card" />
+
+    <ImageView
+        android:id="@+id/element_holder"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="22.5dp"
+        android:layout_marginEnd="22.5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/element_holder" />
+    <ImageView
+        android:id="@+id/character_element"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        app:srcCompat="@drawable/quantum_hsr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+         />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/info_card"
+        app:layout_constraintTop_toBottomOf="@+id/character_img"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#3b4354"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/character_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SilverWolf"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <ImageView
+            android:id="@+id/rarity_star_1"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:srcCompat="@drawable/rarity_star"
+            app:layout_constraintStart_toEndOf="@id/character_name"
+            app:layout_constraintBottom_toBottomOf="@id/character_name"
+            android:layout_marginBottom="2dp"
+            android:layout_marginStart="5dp"
+             />
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:srcCompat="@drawable/rarity_star"
+            app:layout_constraintStart_toEndOf="@id/rarity_star_1"
+            app:layout_constraintBottom_toBottomOf="@id/character_name"
+            android:layout_marginBottom="2dp"
+            android:layout_marginStart="1dp"
+            android:id="@+id/rarity_star_2"
+            />
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:srcCompat="@drawable/rarity_star"
+            app:layout_constraintStart_toEndOf="@id/rarity_star_2"
+            app:layout_constraintBottom_toBottomOf="@id/character_name"
+            android:layout_marginBottom="2dp"
+            android:layout_marginStart="1dp"
+            android:id="@+id/rarity_star_3"
+            />
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:srcCompat="@drawable/rarity_star"
+            app:layout_constraintStart_toEndOf="@id/rarity_star_3"
+            app:layout_constraintBottom_toBottomOf="@id/character_name"
+            android:layout_marginBottom="2dp"
+            android:layout_marginStart="1dp"
+            android:id="@+id/rarity_star_4"
+            />
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:srcCompat="@drawable/rarity_star"
+            app:layout_constraintStart_toEndOf="@id/rarity_star_4"
+            app:layout_constraintBottom_toBottomOf="@id/character_name"
+            android:layout_marginBottom="2dp"
+            android:layout_marginStart="1dp"
+            android:id="@+id/rarity_star_5"
+            />
+
+        <TextView
+            android:id="@+id/character_path"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Path: The Nility"
+            android:textColor="#ffffff"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/character_name" />
+
+        <ImageView
+            android:id="@+id/path_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:srcCompat="@drawable/nihility_hsr"
+            app:layout_constraintStart_toEndOf="@id/character_path"
+            app:layout_constraintBottom_toBottomOf="@id/character_path"
+            android:layout_marginBottom="2dp"
+            android:layout_marginStart="5dp"
+             />
+
+        <TextView
+            android:id="@+id/character_element_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Element: Quantum"
+            android:textColor="#ffffff"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/character_path" />
+
+        <ImageView
+            android:id="@+id/character_element_img"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:srcCompat="@drawable/quantum_hsr"
+            app:layout_constraintStart_toEndOf="@id/character_element_text"
+            app:layout_constraintBottom_toBottomOf="@id/character_element_text"
+            android:layout_marginBottom="2dp"
+            android:layout_marginStart="5dp"
+            />
+
+        <ImageView
+            android:id="@+id/seperator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/character_name"
+            app:layout_constraintBottom_toTopOf="@id/character_path"
+            app:srcCompat="@drawable/info_line_seperator"
+            android:contentDescription="Seperator" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Faction: Stelleron Hunters"
+            android:id="character_faction"
+            android:textColor="#ffffff"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/character_element_text" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    <!--    <androidx.cardview.widget.CardView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="100px"-->
+<!--        android:id="@+id/info_card"-->
+<!--        app:cardCornerRadius="20dp"-->
+<!--        app:cardElevation="10dp"-->
+<!--        app:cardUseCompatPadding="true"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/character_img"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        android:background="#3b4354"-->
+<!--        app:layout_constraintEnd_toEndOf="parent">-->
+<!--        <TextView-->
+<!--            android:id="@+id/textView"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="asdasd" />-->
+<!--    </androidx.cardview.widget.CardView>-->
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
