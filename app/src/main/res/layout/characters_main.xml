@@ -6,16 +6,7 @@
     android:id="@+id/characters_main"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
 
-        android:text="Character Screen"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <android.widget.SearchView
         android:id="@+id/character_search_view"
@@ -66,6 +57,18 @@
         app:layout_constraintBottom_toBottomOf="@+id/character_text"
         app:layout_constraintStart_toEndOf="@+id/character_text"
         app:srcCompat="@drawable/baseline_info_24" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/characters_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="vertical"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/character_text" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
