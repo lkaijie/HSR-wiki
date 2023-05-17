@@ -34,6 +34,12 @@ class Characters : Fragment() {
             Character("SilverWolf", "image_url_1", "5", "Quantum", "TEst", "Nihility"),
             Character("SilverWolf", "image_url_1", "5", "Quantum", "TEst", "Nihility"),
             Character("SilverWolf", "image_url_1", "5", "Quantum", "TEst", "Nihility"),
+            Character("Tingyun", "image_url_2", "4", "Lightning", "Faction 2", "Harmony"),
+            Character("Tingyun", "image_url_2", "4", "Lightning", "Faction 2", "Harmony"),
+            Character("Tingyun", "image_url_2", "4", "Lightning", "Faction 2", "Harmony"),
+            Character("Tingyun", "image_url_2", "4", "Lightning", "Faction 2", "Harmony"),
+            Character("Tingyun", "image_url_2", "4", "Lightning", "Faction 2", "Harmony"),
+
 
             )
         val adapter = CharacterAdapter(charactersList)
