@@ -18,12 +18,27 @@ class CharacterAdapter(private val characters: List<Character>): RecyclerView.Ad
 
 
         // testing
-        val screenHeight = parent.context.resources.displayMetrics.heightPixels
+//        val screenHeight = parent.context.resources.displayMetrics.heightPixels
+//        val portionRatio = 0.6 // 60% of the screen height
+//        val portionHeight = (screenHeight * portionRatio).toInt()
+//
+//        val layoutParams = itemView.layoutParams
+//        layoutParams.height = portionHeight
+//        itemView.layoutParams = layoutParams
+//
+//        return CharacterViewHolder(itemView)
+        val displayMetrics = parent.context.resources.displayMetrics
+        val screenHeight = if (displayMetrics.widthPixels < displayMetrics.heightPixels) {
+            // Portrait mode
+            displayMetrics.heightPixels
+        } else {
+            // Landscape mode
+            displayMetrics.widthPixels
+        }
         val portionRatio = 0.6 // 60% of the screen height
         val portionHeight = (screenHeight * portionRatio).toInt()
 
-        val layoutParams = itemView.layoutParams
-        layoutParams.height = portionHeight
+        val layoutParams = RecyclerView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, portionHeight)
         itemView.layoutParams = layoutParams
 
         return CharacterViewHolder(itemView)
