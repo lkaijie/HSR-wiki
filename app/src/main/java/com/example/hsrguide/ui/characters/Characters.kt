@@ -1,5 +1,6 @@
 package com.example.hsrguide.ui.characters
 
+import android.content.res.Configuration
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -29,7 +30,12 @@ class Characters : Fragment() {
             Character("SilverWolf", "image_url_1", "5", "Quantum", "TEst", "Nihility"),
             Character("Tingyun", "image_url_2", "4", "Lightning", "Faction 2", "Harmony"),
             // Add more characters as needed
-        )
+            Character("SilverWolf", "image_url_1", "5", "Quantum", "TEst", "Nihility"),
+            Character("SilverWolf", "image_url_1", "5", "Quantum", "TEst", "Nihility"),
+            Character("SilverWolf", "image_url_1", "5", "Quantum", "TEst", "Nihility"),
+            Character("SilverWolf", "image_url_1", "5", "Quantum", "TEst", "Nihility"),
+
+            )
         val adapter = CharacterAdapter(charactersList)
         recyclerView.adapter = adapter
 
@@ -46,6 +52,23 @@ class Characters : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
     }
+
+//    override fun onConfigurationChanged(newConfig: Configuration) {
+//        super.onConfigurationChanged(newConfig)
+//        val recyclerView = binding.charactersRecyclerView
+//        val layoutManager = GridLayoutManager(requireContext(), calculateSpanCount(newConfig))
+//        recyclerView.layoutManager = layoutManager
+//    }
+//
+//    private fun calculateSpanCount(configuration: Configuration): Int {
+//        // Calculate the number of columns based on the new configuration
+//        // You can customize the logic here based on your requirements
+//        return if (configuration.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+//            3 // 3 columns in landscape orientation
+//        } else {
+//            2 // 2 columns in portrait orientation
+//        }
+//    }
 
     override fun onDestroyView() {
         super.onDestroyView()
