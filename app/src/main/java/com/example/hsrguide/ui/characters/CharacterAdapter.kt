@@ -15,6 +15,17 @@ class CharacterAdapter(private val characters: List<Character>): RecyclerView.Ad
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CharacterViewHolder {
         val itemView = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_character, parent, false)
+
+
+        // testing
+        val screenHeight = parent.context.resources.displayMetrics.heightPixels
+        val portionRatio = 0.6 // 60% of the screen height
+        val portionHeight = (screenHeight * portionRatio).toInt()
+
+        val layoutParams = itemView.layoutParams
+        layoutParams.height = portionHeight
+        itemView.layoutParams = layoutParams
+
         return CharacterViewHolder(itemView)
     }
 
@@ -42,7 +53,10 @@ class CharacterAdapter(private val characters: List<Character>): RecyclerView.Ad
                     rarityStar5.visibility = View.GONE
                     binding.root.setBackgroundResource(R.drawable.four_star_background)
 
+                } else{
+                    binding.root.setBackgroundResource(R.drawable.five_star_background)
                 }
+
                 when (character.path){
                     "Nihility" -> {
                         characterPath.text = "Path: "+ character.path
