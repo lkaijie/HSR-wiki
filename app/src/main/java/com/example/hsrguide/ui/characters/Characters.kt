@@ -39,6 +39,8 @@ class Characters : Fragment() {
             Character("Tingyun", "image_url_2", "4", "Lightning", "Faction 2", "Harmony"),
             Character("Tingyun", "image_url_2", "4", "Lightning", "Faction 2", "Harmony"),
             Character("Tingyun", "image_url_2", "4", "Lightning", "Faction 2", "Harmony"),
+            Character("Jing Yuan", "image_url_2", "5", "Lightning", "GEnshin impact", "Erudition"),
+            // paths : "Nihility" "Harmony" "Destruction" "Quantum" "Lightning" "Erudition" "Hunt" "Abundance" "Preservation"
 
 
             )
@@ -46,6 +48,15 @@ class Characters : Fragment() {
         recyclerView.adapter = adapter
 
         val spanCount = 2 // Number of columns in the grid
+
+//        val desiredColumnWidth = resources.getDimensionPixelSize(R.dimen.desired_column_width)  // max width?
+//        val displayMetrics = resources.displayMetrics
+//        val screenWidth = displayMetrics.widthPixels
+//        val spanCount = screenWidth / desiredColumnWidth
+//        layoutManager.spanCount = spanCount
+
+
+
         val spacing = resources.getDimensionPixelSize(R.dimen.grid_spacing) // Spacing between items in pixels
         val includeEdge = true // Include spacing at the edges of the grid
 
@@ -75,6 +86,7 @@ class Characters : Fragment() {
 //            2 // 2 columns in portrait orientation
 //        }
 //    }
+//    TODO: implement infinite scrolling kinda? only show pics and stuff when scrolled to
 
     override fun onDestroyView() {
         super.onDestroyView()

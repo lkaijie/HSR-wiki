@@ -1,9 +1,9 @@
 package com.example.hsrguide.ui.characters
 
+import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hsrguide.R
 import com.example.hsrguide.databinding.ItemCharacterBinding
@@ -60,9 +60,18 @@ class CharacterAdapter(private val characters: List<Character>): RecyclerView.Ad
                 characterName.text = character.name
                 characterFaction.text = "Faction: "+ character.faction
 
-                val resourceName = character.name.lowercase() + "_big"
-                val resId = itemView.context.resources.getIdentifier(resourceName, "drawable", itemView.context.packageName)
-                characterImg.setImageResource(resId)
+//                val resourceName = character.name.lowercase() + "_big"
+//                val resId = itemView.context.resources.getIdentifier(resourceName, "drawable", itemView.context.packageName)
+//                characterImg.setImageResource(resId)
+
+
+                // loading from assets instead
+                // every non path/elemetns should be from assets(fix naming scheme at some point)
+                val assetManager = itemView.context.assets
+                val resourceName = "${character.name.lowercase()}_big_asset.png"
+                val inputStream = assetManager.open(resourceName)
+                val drawable = Drawable.createFromStream(inputStream, null)
+                characterImg.setImageDrawable(drawable)
 
                 if (character.rarity == "4"){
                     rarityStar5.visibility = View.GONE
