@@ -12,6 +12,7 @@ import com.example.hsrguide.R
 import com.example.hsrguide.databinding.CharactersMainBinding
 import com.example.hsrguide.data.model.Character
 import com.example.hsrguide.ui.characters.GridSpacingItemDecoration
+import java.util.*
 
 
 class Characters : Fragment() {
@@ -27,6 +28,21 @@ class Characters : Fragment() {
         val layoutManager = GridLayoutManager(requireContext(), 2)
         recyclerView.layoutManager = layoutManager
         val charactersList = listOf(
+//            Character("SilverWolf", "image_url_1", "5", "Quantum", "TEst", "Nihility", id = UUID.randomUUID().toString()),
+//            Character("Tingyun", "image_url_2", "4", "Lightning", "Faction 2", "Harmony", id = UUID.randomUUID().toString()),
+//            // Add more characters as needed
+//            Character("SilverWolf", "image_url_1", "5", "Quantum", "TEst", "Nihility", id = UUID.randomUUID().toString()),
+//            Character("SilverWolf", "image_url_1", "5", "Quantum", "TEst", "Nihility", id = UUID.randomUUID().toString()),
+//            Character("SilverWolf", "image_url_1", "5", "Quantum", "TEst", "Nihility", id = UUID.randomUUID().toString()),
+//            Character("SilverWolf", "image_url_1", "5", "Quantum", "TEst", "Nihility", id = UUID.randomUUID().toString()),
+//
+//            Character("Tingyun", "image_url_2", "4", "Lightning", "Faction 2", "Harmony", id = UUID.randomUUID().toString()),
+//            Character("Tingyun", "image_url_2", "4", "Lightning", "Faction 2", "Harmony", id = UUID.randomUUID().toString()),
+//            Character("Tingyun", "image_url_2", "4", "Lightning", "Faction 2", "Harmony", id = UUID.randomUUID().toString()),
+//            Character("Tingyun", "image_url_2", "4", "Lightning", "Faction 2", "Harmony", id = UUID.randomUUID().toString()),
+//
+//            Character("Jing Yuan", "image_url_2", "5", "Lightning", "GEnshin impact", "Erudition", id = UUID.randomUUID().toString()),
+            // paths : "Nihility" "Harmony" "Destruction" "Quantum" "Lightning" "Erudition" "Hunt" "Abundance" "Preservation"
             Character("SilverWolf", "image_url_1", "5", "Quantum", "TEst", "Nihility"),
             Character("Tingyun", "image_url_2", "4", "Lightning", "Faction 2", "Harmony"),
             // Add more characters as needed
@@ -40,11 +56,16 @@ class Characters : Fragment() {
             Character("Tingyun", "image_url_2", "4", "Lightning", "Faction 2", "Harmony"),
             Character("Tingyun", "image_url_2", "4", "Lightning", "Faction 2", "Harmony"),
             Character("Jing Yuan", "image_url_2", "5", "Lightning", "GEnshin impact", "Erudition"),
-            // paths : "Nihility" "Harmony" "Destruction" "Quantum" "Lightning" "Erudition" "Hunt" "Abundance" "Preservation"
-
-
             )
+//        for (item in charactersList) {
+//            val randomId = UUID.randomUUID().toString()
+//            item.id = randomId
+//        }
+
         val adapter = CharacterAdapter(charactersList)
+
+//        test
+//        adapter.setHasStableIds(true)
         recyclerView.adapter = adapter
 
         val spanCount = 2 // Number of columns in the grid

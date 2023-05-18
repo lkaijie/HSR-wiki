@@ -1,12 +1,11 @@
 package com.example.hsrguide.data.model
 
-data class Character (
+data class Lightcone (
     val name: String,
     val image: String,
     val rarity: String,
-    val element: String,
-    val faction: String,
     val path: String,
-//    val id: String,
-
-    )
+    val hp: String,
+    val atk: String,
+    val def: String,
+)

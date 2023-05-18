@@ -53,6 +53,10 @@ class CharacterAdapter(private val characters: List<Character>): RecyclerView.Ad
         return characters.size
     }
 
+//    override fun getItemId(position: Int): Long {
+//        return characters[position].id.hashCode().toLong()
+//    }
+
     class CharacterViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         fun bind(character: Character) {
             val binding = ItemCharacterBinding.bind(itemView)
@@ -65,10 +69,11 @@ class CharacterAdapter(private val characters: List<Character>): RecyclerView.Ad
 //                characterImg.setImageResource(resId)
 
 
+
                 // loading from assets instead
                 // every non path/elemetns should be from assets(fix naming scheme at some point)
                 val assetManager = itemView.context.assets
-                val resourceName = "${character.name.lowercase()}_big_asset.png"
+                val resourceName = "characters/${character.name.lowercase()}_big_asset.png"
                 val inputStream = assetManager.open(resourceName)
                 val drawable = Drawable.createFromStream(inputStream, null)
                 characterImg.setImageDrawable(drawable)

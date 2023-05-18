@@ -10,7 +10,7 @@
         android:id="@+id/character_img"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:srcCompat="@drawable/silverwolf_big"
+        app:srcCompat="@drawable/herta_cone"
         android:scaleType="centerCrop"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,13 +26,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/element_holder" />
+
     <ImageView
         android:id="@+id/character_element"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
-        app:srcCompat="@drawable/quantum_hsr"
+        app:srcCompat="@drawable/nihility_hsr"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         />
@@ -47,12 +48,13 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <TextView
-            android:id="@+id/character_name"
+            android:id="@+id/lightcone_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="SilverWolf"
+            android:text="The Birth of the Self
+"
             android:textColor="#ffffff"
-            android:textSize="20sp"
+            android:textSize="16sp"
             android:textStyle="bold"
             android:layout_margin="10dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -62,55 +64,23 @@
 
         <ImageView
             android:id="@+id/rarity_star_1"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            app:srcCompat="@drawable/rarity_star"
-            app:layout_constraintStart_toStartOf="@id/character_name"
-            app:layout_constraintTop_toBottomOf="@id/character_name"
+            android:layout_width="120dp"
+            android:layout_height="12dp"
+            app:srcCompat="@drawable/rarity_5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lightcone_name"
             android:layout_marginBottom="2dp"
             />
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            app:srcCompat="@drawable/rarity_star"
-            app:layout_constraintStart_toEndOf="@id/rarity_star_1"
-            app:layout_constraintBottom_toBottomOf="@id/rarity_star_1"
 
-            android:id="@+id/rarity_star_2"
-            />
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            app:srcCompat="@drawable/rarity_star"
-            app:layout_constraintStart_toEndOf="@id/rarity_star_2"
-            app:layout_constraintBottom_toBottomOf="@id/rarity_star_2"
-            android:id="@+id/rarity_star_3"
-            />
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            app:srcCompat="@drawable/rarity_star"
-            app:layout_constraintStart_toEndOf="@id/rarity_star_3"
-            app:layout_constraintBottom_toBottomOf="@id/rarity_star_3"
-
-            android:id="@+id/rarity_star_4"
-            />
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            app:srcCompat="@drawable/rarity_star"
-            app:layout_constraintStart_toEndOf="@id/rarity_star_4"
-            app:layout_constraintBottom_toBottomOf="@id/rarity_star_4"
-            android:id="@+id/rarity_star_5"
-            />
 
         <TextView
-            android:id="@+id/character_path"
+            android:id="@+id/lightcone_path"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Path: The Nility"
+            android:text="The Nility"
             android:textColor="#ffffff"
-            android:textSize="15sp"
+            android:textSize="10sp"
             android:textStyle="bold"
             android:layout_marginTop="-8dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -122,36 +92,81 @@
             android:layout_width="20dp"
             android:layout_height="20dp"
             app:srcCompat="@drawable/nihility_hsr"
-            app:layout_constraintStart_toEndOf="@id/character_path"
-            app:layout_constraintBottom_toBottomOf="@id/character_path"
-
+            app:layout_constraintStart_toEndOf="@id/lightcone_path"
+            app:layout_constraintBottom_toBottomOf="@id/lightcone_path"
             android:layout_marginBottom="1dp"
             android:layout_marginStart="1dp"
             />
 
         <TextView
-            android:id="@+id/character_element_text"
+            android:id="@+id/character_hp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Element: Quantum"
+            android:text="43"
             android:textColor="#ffffff"
             android:textSize="15sp"
             android:textStyle="bold"
-            android:layout_margin="1dp"
-
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/character_path" />
+            android:layout_margin="5dp"
+            app:layout_constraintStart_toEndOf="@id/character_element_img"
+            app:layout_constraintTop_toBottomOf="@id/lightcone_path"
+            app:layout_constraintBottom_toBottomOf="@id/character_element_img" />
 
         <ImageView
             android:id="@+id/character_element_img"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            app:srcCompat="@drawable/quantum_hsr"
-            app:layout_constraintStart_toEndOf="@id/character_element_text"
-            app:layout_constraintBottom_toBottomOf="@id/character_element_text"
+            app:srcCompat="@drawable/icon_hp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lightcone_path"
             android:layout_marginBottom="1dp"
-            android:layout_marginStart="1dp"
+            android:layout_marginStart="100dp"
+            />
+        <TextView
+            android:id="@+id/character_def"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15"
+            android:textColor="#ffffff"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_margin="1dp"
+            app:layout_constraintStart_toEndOf="@id/icon_def"
+            app:layout_constraintTop_toBottomOf="@id/lightcone_path"
+            app:layout_constraintBottom_toBottomOf="@id/character_hp"/>
+        <ImageView
+            android:id="@+id/icon_def"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:srcCompat="@drawable/icon_def"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lightcone_path"
+            android:layout_marginBottom="1dp"
+            android:layout_marginEnd="20dp"
+            />
+        <TextView
+            android:id="@+id/character_atk"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:text="21"
+            android:textColor="#ffffff"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_margin="1dp"
+            app:layout_constraintStart_toEndOf="@id/icon_atk"
+            app:layout_constraintTop_toBottomOf="@id/lightcone_path"
+            app:layout_constraintBottom_toBottomOf="@id/character_hp"
+            />
+
+        <ImageView
+            android:id="@+id/icon_atk"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:srcCompat="@drawable/icon_atk"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lightcone_path"
+            android:layout_marginBottom="1dp"
+            android:layout_marginEnd="120dp"
             />
 
         <ImageView
@@ -162,23 +177,10 @@
 
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/rarity_star_1"
-            app:layout_constraintBottom_toTopOf="@id/character_path"
+            app:layout_constraintBottom_toTopOf="@id/lightcone_path"
             app:srcCompat="@drawable/info_line_seperator"
             android:contentDescription="Seperator" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Faction: Stelleron Hunters"
-            android:id="@+id/character_faction"
-            android:textColor="#ffffff"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:layout_margin="1dp"
-            android:layout_marginBottom="10dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/character_element_text" />
+
 
 
 
