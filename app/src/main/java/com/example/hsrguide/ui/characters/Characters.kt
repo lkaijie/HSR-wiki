@@ -45,15 +45,7 @@ class Characters : Fragment() {
             // paths : "Nihility" "Harmony" "Destruction" "Quantum" "Lightning" "Erudition" "Hunt" "Abundance" "Preservation"
             Character("SilverWolf", "image_url_1", "5", "Quantum", "TEst", "Nihility"),
             Character("Tingyun", "image_url_2", "4", "Lightning", "Faction 2", "Harmony"),
-            // Add more characters as needed
             Character("SilverWolf", "image_url_1", "5", "Quantum", "TEst", "Nihility"),
-            Character("SilverWolf", "image_url_1", "5", "Quantum", "TEst", "Nihility"),
-            Character("SilverWolf", "image_url_1", "5", "Quantum", "TEst", "Nihility"),
-            Character("SilverWolf", "image_url_1", "5", "Quantum", "TEst", "Nihility"),
-            Character("Tingyun", "image_url_2", "4", "Lightning", "Faction 2", "Harmony"),
-            Character("Tingyun", "image_url_2", "4", "Lightning", "Faction 2", "Harmony"),
-            Character("Tingyun", "image_url_2", "4", "Lightning", "Faction 2", "Harmony"),
-            Character("Tingyun", "image_url_2", "4", "Lightning", "Faction 2", "Harmony"),
             Character("Tingyun", "image_url_2", "4", "Lightning", "Faction 2", "Harmony"),
             Character("Jing Yuan", "image_url_2", "5", "Lightning", "GEnshin impact", "Erudition"),
             )

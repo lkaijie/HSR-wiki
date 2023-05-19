@@ -10,8 +10,8 @@
         android:id="@+id/character_img"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:srcCompat="@drawable/herta_cone"
-        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/artifact_sample"
+
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -51,10 +51,9 @@
             android:id="@+id/lightcone_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="The Birth of the Self
-"
+            android:text="Firesmith of Lava-Forging"
             android:textColor="#ffffff"
-            android:textSize="16sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             android:layout_margin="10dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -71,6 +70,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/lightcone_name"
             android:layout_marginBottom="2dp"
+            android:visibility="gone"
             />
 
 
@@ -84,6 +84,7 @@
             android:textStyle="bold"
             android:layout_marginTop="-8dp"
             android:layout_marginEnd="16dp"
+            android:visibility="gone"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/seperator" />
@@ -92,6 +93,7 @@
             android:id="@+id/path_icon"
             android:layout_width="16dp"
             android:layout_height="16dp"
+            android:visibility="gone"
             app:srcCompat="@drawable/nihility_hsr"
             app:layout_constraintStart_toEndOf="@id/lightcone_path"
             app:layout_constraintBottom_toBottomOf="@id/lightcone_path"
@@ -101,75 +103,43 @@
             />
 
         <TextView
-            android:id="@+id/character_hp"
+            android:id="@+id/relic_2p"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="43"
+            android:text="2-PC: Increases Fire DMG by 10%."
             android:textColor="#ffffff"
             android:textSize="15sp"
             android:textStyle="bold"
-            android:layout_margin="5dp"
-            app:layout_constraintStart_toEndOf="@id/character_element_img"
-            app:layout_constraintTop_toBottomOf="@id/lightcone_path"
-            app:layout_constraintBottom_toBottomOf="@id/character_element_img" />
 
-        <ImageView
-            android:id="@+id/character_element_img"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            app:srcCompat="@drawable/icon_hp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/lightcone_path"
-            android:layout_marginBottom="1dp"
-            android:layout_marginStart="100dp"
-            />
-        <TextView
-            android:id="@+id/character_def"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="15"
-            android:textColor="#ffffff"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:layout_margin="1dp"
-            app:layout_constraintStart_toEndOf="@id/icon_def"
-            app:layout_constraintTop_toBottomOf="@id/lightcone_path"
-            app:layout_constraintBottom_toBottomOf="@id/character_hp"/>
-        <ImageView
-            android:id="@+id/icon_def"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            app:srcCompat="@drawable/icon_def"
+            android:layout_marginTop="-6dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/lightcone_path"
-            android:layout_marginBottom="1dp"
-            android:layout_marginEnd="20dp"
             />
+
         <TextView
-            android:id="@+id/character_atk"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:text="21"
+            android:id="@+id/relic_4p"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:text="4-PC: Increases Overloaded and Burning DMG by 40%. Increases Vaporize and Melt DMG by 15%. Using an Elemental Skill increases the 2-Piece Set Bonus by 50% of its starting value for 10s. Max 3 stacks."
             android:textColor="#ffffff"
             android:textSize="15sp"
             android:textStyle="bold"
-            android:layout_margin="1dp"
-            app:layout_constraintStart_toEndOf="@id/icon_atk"
-            app:layout_constraintTop_toBottomOf="@id/lightcone_path"
-            app:layout_constraintBottom_toBottomOf="@id/character_hp"
-            />
-
-        <ImageView
-            android:id="@+id/icon_atk"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            app:srcCompat="@drawable/icon_atk"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/lightcone_path"
-            android:layout_marginBottom="1dp"
-            android:layout_marginEnd="120dp"
-            />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/relic_2p" />
+
+
+
 
         <ImageView
             android:id="@+id/seperator"
@@ -187,28 +157,6 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
-    <!--    <androidx.cardview.widget.CardView-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="100px"-->
-    <!--        android:id="@+id/info_card"-->
-    <!--        app:cardCornerRadius="20dp"-->
-    <!--        app:cardElevation="10dp"-->
-    <!--        app:cardUseCompatPadding="true"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/character_img"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--        android:background="#3b4354"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent">-->
-    <!--        <TextView-->
-    <!--            android:id="@+id/textView"-->
-    <!--            android:layout_width="wrap_content"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:text="asdasd" />-->
-    <!--    </androidx.cardview.widget.CardView>-->
 
 
 
