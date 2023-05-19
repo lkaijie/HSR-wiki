@@ -1,10 +1,13 @@
 package com.example.hsrguide.ui.lightcones
 
 import android.graphics.drawable.Drawable
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.example.hsrguide.R
 import com.example.hsrguide.data.model.Lightcone
 import com.example.hsrguide.databinding.ItemLightconeBinding
@@ -53,11 +56,21 @@ class LightconeAdapter(private val lightcones: List<Lightcone>): RecyclerView.Ad
                     characterDef.text = lightcone.def.toString()
 
 
+//                    val assetManager = itemView.context.assets
+//                    val resourceName = "lightcones/${lightcone.name.lowercase()}.png"
+//                    val inputStream = assetManager.open(resourceName)
+//                    val drawable = Drawable.createFromStream(inputStream, null)
+//                    characterImg.setImageDrawable(drawable)
+
+
                     val assetManager = itemView.context.assets
                     val resourceName = "lightcones/${lightcone.name.lowercase()}.png"
-                    val inputStream = assetManager.open(resourceName)
-                    val drawable = Drawable.createFromStream(inputStream, null)
-                    characterImg.setImageDrawable(drawable)
+                    val assetPath = "file:///android_asset/$resourceName"
+
+                    Glide.with(itemView)
+                        .load(Uri.parse(assetPath))
+                        .transition(DrawableTransitionOptions.withCrossFade())
+                        .into(characterImg)
 
                     if (lightcone.rarity == "4"){
                         rarityStar1.setImageResource(R.drawable.rarity_4)

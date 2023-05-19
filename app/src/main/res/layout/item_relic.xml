@@ -11,32 +11,11 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:srcCompat="@drawable/artifact_sample"
-
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/info_card" />
 
-    <ImageView
-        android:id="@+id/element_holder"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="8.2dp"
-        android:layout_marginEnd="8.2dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/element_holder" />
-
-    <ImageView
-        android:id="@+id/character_element"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="15dp"
-        app:srcCompat="@drawable/nihility_hsr"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -48,7 +27,7 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <TextView
-            android:id="@+id/lightcone_name"
+            android:id="@+id/relic_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Firesmith of Lava-Forging"
@@ -68,7 +47,7 @@
             app:srcCompat="@drawable/rarity_5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/lightcone_name"
+            app:layout_constraintTop_toBottomOf="@id/relic_name"
             android:layout_marginBottom="2dp"
             android:visibility="gone"
             />
@@ -108,7 +87,7 @@
             android:layout_height="wrap_content"
             android:text="2-PC: Increases Fire DMG by 10%."
             android:textColor="#ffffff"
-            android:textSize="15sp"
+            android:textSize="10sp"
             android:textStyle="bold"
 
             android:layout_marginTop="-6dp"
@@ -129,7 +108,7 @@
             android:maxLines="3"
             android:text="4-PC: Increases Overloaded and Burning DMG by 40%. Increases Vaporize and Melt DMG by 15%. Using an Elemental Skill increases the 2-Piece Set Bonus by 50% of its starting value for 10s. Max 3 stacks."
             android:textColor="#ffffff"
-            android:textSize="15sp"
+            android:textSize="10sp"
             android:textStyle="bold"
             android:layout_marginBottom="15dp"
             android:layout_marginTop="5dp"

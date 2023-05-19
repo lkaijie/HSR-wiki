@@ -9,7 +9,9 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.example.hsrguide.R
 import com.example.hsrguide.data.model.Lightcone
 import com.example.hsrguide.databinding.LightconesMainBinding
+import com.example.hsrguide.ui.BasedFragment
 import com.example.hsrguide.ui.characters.GridSpacingItemDecoration
+import com.google.android.material.transition.MaterialFadeThrough
 
 class LightconeFragment : Fragment()  {
     private var _binding: LightconesMainBinding? = null
@@ -17,6 +19,9 @@ class LightconeFragment : Fragment()  {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         _binding = LightconesMainBinding.inflate(inflater, container, false)
+
+        enterTransition = MaterialFadeThrough()
+        exitTransition = MaterialFadeThrough()
 
         // set up recycler view
         val recyclerView = binding.lightconesRecyclerView

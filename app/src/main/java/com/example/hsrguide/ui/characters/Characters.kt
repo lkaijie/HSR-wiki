@@ -11,7 +11,9 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.example.hsrguide.R
 import com.example.hsrguide.databinding.CharactersMainBinding
 import com.example.hsrguide.data.model.Character
+import com.example.hsrguide.ui.BasedFragment
 import com.example.hsrguide.ui.characters.GridSpacingItemDecoration
+import com.google.android.material.transition.MaterialFadeThrough
 import java.util.*
 
 
@@ -22,6 +24,9 @@ class Characters : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         _binding = CharactersMainBinding.inflate(inflater, container, false)
 
+
+        enterTransition = MaterialFadeThrough()
+        exitTransition = MaterialFadeThrough()
 
         // set up the recycler view
         val recyclerView = binding.charactersRecyclerView
@@ -75,6 +80,13 @@ class Characters : Fragment() {
 
         recyclerView.addItemDecoration(GridSpacingItemDecoration(spanCount, spacing, includeEdge))
 
+
+
+//        keep fragment alive when navigating
+
+
+
+
         return binding.root
     }
 
@@ -104,5 +116,10 @@ class Characters : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    override fun onPause() {
+        super.onPause()
+
     }
 }

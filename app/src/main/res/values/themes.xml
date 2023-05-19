@@ -12,6 +12,10 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="enterAnim">@anim/enter_anim</item>
+        <item name="exitAnim">@anim/exit_anim</item>
+        <item name="popEnterAnim">@anim/pop_enter_anim</item>
+        <item name="popExitAnim">@anim/pop_exit_anim</item>
     </style>
 
     <style name="Theme.HSRGuide.NoActionBar">

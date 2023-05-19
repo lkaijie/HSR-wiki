@@ -69,6 +69,14 @@
         android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/character_text" />
+
+
+    <ViewStub
+        android:id="@+id/recyclerViewStub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inflatedId="@+id/recyclerView"
+        android:layout="@layout/item_character" />
 <!--    <LinearLayout-->
 <!--        android:layout_width="match_parent"-->
 <!--        android:layout_height="0dp"-->
