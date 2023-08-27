@@ -15,20 +15,22 @@ class RelicAdapter(private val relics: List<Relic>): RecyclerView.Adapter<RelicA
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RelicViewHolder {
         val itemView = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_relic, parent, false)
-//
-//        val displayMetrics = parent.context.resources.displayMetrics
-//        val screenHeight = if (displayMetrics.widthPixels < displayMetrics.heightPixels) {
-//            // Portrait mode
-//            displayMetrics.heightPixels
-//        } else {
-//            // Landscape mode
-//            displayMetrics.widthPixels
-//        }
-//        val portionRatio = 0.3 // 40% of the screen height
-//        val portionHeight = (screenHeight * portionRatio).toInt()
-//
-//        val layoutParams = RecyclerView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, portionHeight)
-//        itemView.layoutParams = layoutParams
+
+        val displayMetrics = parent.context.resources.displayMetrics
+        val screenHeight = if (displayMetrics.widthPixels < displayMetrics.heightPixels) {
+            // Portrait mode
+            displayMetrics.heightPixels
+        } else {
+            // Landscape mode
+            displayMetrics.widthPixels
+        }
+        val portionRatio = 0.5 // 40% of the screen height
+        val portionHeight = (screenHeight * portionRatio).toInt()
+
+//        val portionHeight = screenHeight
+
+        val layoutParams = RecyclerView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, portionHeight)
+        itemView.layoutParams = layoutParams
 
         return RelicViewHolder(itemView)
         }
@@ -52,8 +54,6 @@ class RelicAdapter(private val relics: List<Relic>): RecyclerView.Adapter<RelicA
                     val inputStream = assetManager.open(resourceName)
                     val drawable = Drawable.createFromStream(inputStream, null)
                     characterImg.setImageDrawable(drawable)
-
-
                 }
             }
         }
