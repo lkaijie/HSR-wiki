@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_map"
+        android:checkable="false"
+        android:enabled="true"
+
+        android:title="test1"
+        android:visible="true" />
+
+    <item
+        android:id="@+id/navigation_scan"
+        android:enabled="true"
+        android:title="test2" />
+
+    <item
+        android:id="@+id/navigation_leaderboard"
+        android:enabled="true"
+        android:title="test3" />
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:enabled="true"
+        android:title="test4" />
+
+</menu>
